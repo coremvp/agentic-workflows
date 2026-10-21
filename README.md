@@ -1,8 +1,41 @@
 # Agentic Workflows
 
-Reusable skills and workflows for developing and marketing your application with
-your existing coding agent. Start with **Development** or **Marketing**, describe
-the result you want, and load the methods relevant to that task.
+Open-source skills and workflows for working with Codex and Claude Code.
+
+Question a feature before building it. Keep implementation focused. Review the change and identify what still needs proof.
+
+10 skills. Four development workflows: Proposal, Challenge, Implementation and AI Code Review. Free under the MIT license.
+
+## Quick Start
+
+1. Clone the resource:
+
+   ```sh
+   git clone https://github.com/coremvp/agentic-workflows.git
+   ```
+
+2. Open your application repository in Codex or Claude Code. Paste the setup prompt below, replacing the path.
+
+3. Review the proposed changes and resolve any conflicts. After installation, start a fresh session and try one workflow.
+
+Setup prompt:
+
+```text
+Install Agentic Workflows from <absolute checkout path> into this repository. Read its README installation contract and inspect my existing instructions, skills and configuration. Show the exact file plan and any conflicts before editing. Preserve existing instructions, configuration and learned Taste entries. Ask before material replacements. After approval, install the package and verify discovery. Do not change application code, security settings or call paid providers.
+```
+
+## Try Challenge
+
+Before building a feature, give the agent the original request and your proposed approach. Ask it to question the requirements and find unnecessary work.
+
+Prompt:
+
+```text
+Read .agents/workflows/challenge.md and its linked Review Agent role. Challenge the plan below against the original request and relevant source. Identify unnecessary work and the smallest sufficient alternative. Return concrete findings and a verdict. Stop after the assessment. Do not implement, run checks or publish anything.
+
+Original request: <paste the request>
+Proposed approach: <paste your plan>
+```
 
 The package supplies instructions, references and thin Codex/Claude Code actor
 definitions. You supply the client, account, model access and application tools.
